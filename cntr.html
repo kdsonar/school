@@ -1,0 +1,157 @@
+Skip to content
+Kstech123
+/
+biz
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+biz/kws.html
+@Kstech123
+Kstech123 Create kws.html
+ 1 contributor
+601 lines (561 sloc)  19.1 KB
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kswebservices | Home page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Digital Biz a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/simpleLightbox.css" rel='stylesheet' type='text/css' />
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+				
+	<!-- /stats -->
+	<section class="stats_test container-fluid">
+		<div class="row inner_stat_wthree_agileits">
+			<div class="col-md-3 stats_left counter_grid">
+				<i class="fa fa-building"></i>
+				<p class="counter">145</p>
+				<h4>Branches</h4>
+			</div>
+			<div class="col-md-3 stats_left counter_grid1">
+				<i class="fa fa-users"></i>
+				<p class="counter">165</p>
+				<h4>Trainers</h4>
+			</div>
+			<div class="col-md-3 stats_left counter_grid2">
+				<i class="fa fa-edit"></i>
+				<p class="counter">563</p>
+				<h4>Pojects</h4>
+			</div>
+			<div class="col-md-3 stats_left counter_grid3">
+				<i class="fa fa-smile"></i>
+				<p class="counter">1045</p>
+				<h4>Happy Clients</h4>
+			</div>
+
+		</div>
+		</div>
+	</section>
+	<!-- //stats -->
+	
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<!-- //js -->
+	<!-- simpleLightbox -->
+	<script src="js/simpleLightbox.js"></script>
+	<script>
+		$('.proj_gallery_grid a').simpleLightbox();
+	</script>
+	<!-- //simpleLightbox -->
+	<!-- flexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+	 
+	  $(window).load(function(){
+		$('.flexslider').flexslider({
+		  animation: "slide",
+		  start: function(slider){
+			$('body').removeClass('loading');
+		  }
+		});
+	  });
+	</script>
+  
+	<!-- //flexSlider -->
+
+	<!-- stats -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats -->
+	<!-- /js files -->
+	<link href='css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+	<link href='css/aos-animation.css' rel='stylesheet prefetch' type="text/css" media="all" />
+	<script src='js/aos.js'></script>
+	<script src="js/aosindex.js"></script>
+	<!-- //js files -->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<a href="#home" class="scroll" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
