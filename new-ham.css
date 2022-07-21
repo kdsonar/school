@@ -162,8 +162,8 @@ img {
     transform: rotate(-135deg);
 }
 
-@media (max-width: 450px){
+@media (max-width: 500px){
     .navigation__checkbox:checked~.navigation__background {
-    transform: scale(22);
+    transform: scale(25);
     }
 }
