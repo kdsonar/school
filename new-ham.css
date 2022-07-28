@@ -35,7 +35,7 @@ img {
     top: 20px;
     right: 20px;
     z-index: 2000;
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
     transition: all 2s;
