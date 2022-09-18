@@ -101,6 +101,7 @@
 
         .div11 {
             grid-area: ip11;
+            height: auto;
         }
 
         .div12 {
@@ -122,16 +123,12 @@
                     'ip10'
                     'ip11'
                     'ip12';
-                padding: 30px 0px;
-                gap: 20;
+                padding: 20px 0px;
+                gap: 20px;
                 width: 90%;
                 max-width: 400px;
                 margin: 0px auto;
             }
-
-            .parent a img{
-                height: auto;
-             }
         }
 
         @media (min-width: 671px) and (max-width: 1100px) {
@@ -150,10 +147,6 @@
                 padding: 30px 20px;
                 gap: 20px;
             }
-
-            .parent a img{
-                height: auto;
-             }
         }
 
         @media (min-width: 751px) and (max-width: 900px) {
@@ -166,13 +159,13 @@
             .parent {
                 padding: 30px 0px;
                 width: 85%;
-                max-width: 870px;
+                max-width: 820px;
                 margin: 0px auto;
             }
         }
     </style>
 </head>
-    
+
 <body>
 
     <section>
@@ -237,4 +230,4 @@
     lightGallery(document.querySelector('.parent'));
 </script>
 
-</html>    
+</html>
