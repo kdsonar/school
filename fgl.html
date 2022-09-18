@@ -107,7 +107,7 @@
             grid-area: ip12;
         }
 
-        @media (max-width: 670px) {
+        @media (max-width: 450px) {
             .parent {
                 grid-template-areas:
                     'ip1'
@@ -131,7 +131,7 @@
             }
         }
 
-        @media (min-width: 671px) and (max-width: 1100px) {
+        @media (min-width: 451px) and (max-width: 1100px) {
             .parent {
                 grid-template-areas:
                     'ip1 ip2'
@@ -141,11 +141,13 @@
                     'ip5 ip6'
                     'ip10 ip7'
                     'ip10 ip8'
-                    'ip11 ip8'
-                    'ip11 ip9'
-                    'ip12 ip9';
+                    'ip9 ip8'
+                    'ip9 ip11'
+                    'ip12 ip11';
+                grid-template-rows: 300px 100px 240px 10px 250px 300px 200px 70px 250px 300px;
                 padding: 30px 20px;
                 gap: 20px;
+                /* 671px */
             }
         }
 
