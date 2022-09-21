@@ -63,11 +63,11 @@
             position: fixed;
             top: 0px;
             right: 0px;
-            -webkit-transition: background 1s, z-index .01s;
-            -moz-transition: background 1s, z-index .01s;
-            -o-transition: background 1s, z-index .01s;
-            -ms-transition: background 1s, z-index .01s;
-            transition: background 1s, z-index .01s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            -ms-transition: all 1s;
+            transition: all 1s;
         }
 
         .navigation__nav {
@@ -119,6 +119,7 @@
 
         .navigation__checkbox:checked~.navigation__background {
             background: #010964;
+            z-index: 2;
         }
 
         .navigation__checkbox:checked~.navigation__nav {
@@ -232,7 +233,7 @@
                 <div class="carousel-item active" data-bs-interval="3500">
                     <img src="img/img2.jpg" class="d-block w-100" alt="bhushan magar foundation's image 1">
                     <div class="carousel-caption">
-                        <h1 class="cptn">डॉ. भूषणदादा मगर फाउंडेशन</h1>
+                        <h1 class="cptn">डॉ. भूषण मगर फाउंडेशन</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
