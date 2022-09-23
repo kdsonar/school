@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.swiper {
+    background: #222;
+    height: 60vh;
+    width: 100%;
+}
+
+.swiper-slide {
+    animation-timing-function: ease-in-out;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: #fff;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.cl1 {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.cl1 > h2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #222;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 10px 5px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+}
+
+.cl1>p {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #222;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: justify;
+    font-size: 1.4rem;
+    width: 70%;
+}
+
+.cl2 {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.cl2 > img {
+    object-fit: contain;
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border: 3px solid #fff;
+}
