@@ -1,68 +1,39 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Counter</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-	<script type="application/x-javascript">
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+        .box {
+            background-color: cornflowerblue;
+            height: 350px;
+            width: 100%;
+            position: relative;
+        }
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<link href="css/simpleLightbox.css" rel='stylesheet' type='text/css' />
-	<link href="css/fontawesome-all.css" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        img {
+            height: auto;
+            width: 95%;
+            max-width: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 <body>
-				
-	<!-- /stats -->
-	<section class="stats_test container-fluid">
-		<div class="row inner_stat_wthree_agileits">
-			<div class="col-md-3 stats_left counter_grid">
-				<i class="fa fa-building"></i>
-				<p class="counter">145</p>
-				<h4>Branches</h4>
-			</div>
-			<div class="col-md-3 stats_left counter_grid1">
-				<i class="fa fa-users"></i>
-				<p class="counter">165</p>
-				<h4>Trainers</h4>
-			</div>
-			<div class="col-md-3 stats_left counter_grid2">
-				<i class="fa fa-edit"></i>
-				<p class="counter">569</p>
-				<h4>Pojects</h4>
-			</div>
-			<div class="col-md-3 stats_left counter_grid3">
-				<i class="fa fa-smile"></i>
-				<p class="counter">1270</p>
-				<h4>Happy Clients</h4>
-			</div>
-
-		</div>
-		</div>
-	</section>
-	<!-- //stats -->
-	
-	<!-- js -->
-	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.countup.js"></script>
-	<script>
-		$('.counter').countUp();
-	</script>
-
+    <div class="box">
+        <img src="img/img2.jpg" alt="">
+    </div>
 </body>
 
 </html>
