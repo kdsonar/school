@@ -14,7 +14,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="cl1">
-                    <h2>HELLO I AM A DUMMY TEXT</h2>
+                    <h2>HELLO I AM A DUMMY TEXT1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptates praesentium vel maiores
                         ipsam ipsum aliquid veritatis, omnis quas, labore facilis quia fugit unde! Repellendus eius modi
                         eos eveniet ipsa?</p>
@@ -25,7 +25,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="cl1">
-                    <h2>HELLO I AM A DUMMY TEXT</h2>
+                    <h2>HELLO I AM A DUMMY TEXT2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptates praesentium vel maiores
                         ipsam ipsum aliquid veritatis, omnis quas, labore facilis quia fugit unde! Repellendus eius modi
                         eos eveniet ipsa?</p>
@@ -36,7 +36,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="cl1">
-                    <h2>HELLO I AM A DUMMY TEXT</h2>
+                    <h2>HELLO I AM A DUMMY TEXT3</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptates praesentium vel maiores
                         ipsam ipsum aliquid veritatis, omnis quas, labore facilis quia fugit unde! Repellendus eius modi
                         eos eveniet ipsa?</p>
@@ -47,7 +47,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="cl1">
-                    <h2>HELLO I AM A DUMMY TEXT</h2>
+                    <h2>HELLO I AM A DUMMY TEXT4</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptates praesentium vel maiores
                         ipsam ipsum aliquid veritatis, omnis quas, labore facilis quia fugit unde! Repellendus eius modi
                         eos eveniet ipsa?</p>
@@ -67,9 +67,14 @@
             autoplay: {
                 delay: 4500,
                 disableOnInteraction: false,
-                pauseOnMouseEnter: true,
+                pauseOnMouseEnter: false,
             },
             loop: true,
+            lazy: true,
+            effect: "fade",
+            keyboard: {
+                enabled: true,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -77,6 +82,13 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1151: {
+                    autoplay: {
+                        pauseOnMouseEnter: true,
+                    },
+                },
             },
         });
     </script>
