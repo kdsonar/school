@@ -20,64 +20,91 @@
     color: #fff;
 }
 
+/* .swiper .swiper-pagination-bullet {
+    height: 5px;
+    width: 40px;
+    border-radius: 2px;
+    opacity: 0.5;
+} */
+
 .swiper .swiper-pagination-bullet-active {
     background: #fff;
+    /* opacity: 1; */
 }
 
 .swiper-slide {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: relative;
 }
 
 .cl1 {
+    /* background-color: yellow; */
     width: 100%;
     max-width: 600px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.cl1 > h2 {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #222;
-    background-color: rgba(255, 255, 255, .8);
+.cl1>h2 {
+    color: rgba(0, 0, 0, .7);
+    background-color: #fff;
     padding: 10px 5px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     width: 40%;
+    margin: 0px auto 10px;
 }
 
 .cl1>p {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #222;
-    background-color: rgba(255, 255, 255, .8);
+    color: rgba(0, 0, 0, .7);
+    background-color: #fff;
     padding: 15px;
     border-radius: 20px;
     text-align: justify;
     font-size: 1.4rem;
     width: 70%;
+    margin: 10px auto 0px;
 }
 
 .cl2 {
+    /* background-color: blue; */
     width: 100%;
     max-width: 600px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.cl2 > img {
+.cl2>img {
     object-fit: contain;
     width: 90%;
     max-width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 30px;
     border-radius: 30px;
     border: 3px solid #fff;
+}
+
+@media (max-width: 1000px) {
+    .swiper {
+        min-height: 400px;
+        height: 50vh;
+        max-height: 600px;
+    }
+
+    .swiper-slide {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .cl1>h2 {
+        width: 90%;
+        max-width: 225px;
+    }
+
+    .cl1>p {
+        display: none;
+    }
 }
