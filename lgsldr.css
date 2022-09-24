@@ -90,7 +90,7 @@
     .swiper {
         /* min-height: 400px; */
         height: 65vh;
-        max-height: 355px;
+        max-height: 330px;
     }
 
     .swiper-slide {
@@ -102,6 +102,7 @@
     .cl1>h2 {
         width: 90%;
         max-width: 225px;
+        margin: 0px auto;
     }
 
     .cl1>p {
