@@ -126,7 +126,7 @@
     }
 }
 
-@media (max-height: 350px) { 
+@media (max-height: 415px) { 
     .swiper { 
         min-height: 330px;
     }
