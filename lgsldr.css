@@ -88,8 +88,8 @@
 
 @media (max-width: 1000px) {
     .swiper {
-        min-height: 400px;
-        height: 45vh;
+        /* min-height: 400px; */
+        height: 55vh;
         max-height: 500px;
     }
 
