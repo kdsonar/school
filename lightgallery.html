@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallery</title>
+    <link rel="stylesheet" href="css/lightgallery_main.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
+</head>
+
+<body>
+
+    <section>
+        <h1>GALLERY<div class="line"></div>
+        </h1>
+        <div class="parent" id="animated-thumbnails">
+
+            <a href="img/img1.jpg" class="div1"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 1</h4><p>description 1</p></div>">
+                <img src="img/img1.jpg" />
+            </a>
+
+            <a href="img/img2.jpg" class="div2"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 2</h4><p>description 2</p></div>">
+                <img src="img/img2.jpg" />
+            </a>
+
+            <a href="img/img3.jpg" class="div3"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 3</h4><p>description 3</p></div>">
+                <img src="img/img3.jpg" />
+            </a>
+
+            <a href="img/img4.jpg" class="div4"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 4</h4><p>description 4</p></div>">
+                <img src="img/img4.jpg" />
+            </a>
+
+            <a href="img/img6.jpg" class="div5"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 5</h4><p>description 5</p></div>">
+                <img src="img/img6.jpg" />
+            </a>
+
+            <a href="img/img5.jpg" class="div6"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 6</h4><p>description 6</p></div>">
+                <img src="img/img5.jpg" />
+            </a>
+
+            <a href="img/img1.jpg" class="div7"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 7</h4><p>description 7</p></div>">
+                <img src="img/img1.jpg" />
+            </a>
+
+            <a href="img/img3.jpg" class="div8"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 8</h4><p>description 8</p></div>">
+                <img src="img/img3.jpg" />
+            </a>
+
+            <a href="img/img2.jpg" class="div9"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 9</h4><p>description 9</p></div>">
+                <img src="img/img2.jpg" />
+            </a>
+
+            <a href="img/img8.jpg" class="div10"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 10</h4><p>description 10</p></div>">
+                <img src="img/img8.jpg" />
+            </a>
+
+            <a href="img/img7.jpg" class="div11"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 11</h4><p>description 11</p></div>">
+                <img src="img/img7.jpg" />
+            </a>
+
+            <a href="img/img6.jpg" class="div12"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 12</h4><p>description 12</p></div>">
+                <img src="img/img6.jpg" />
+            </a>
+        </div>
+    </section>
+</body>
+
+<script src="js/lightgallery_main.js"></script>
+<script src="js/lightgallery_zoom.js"></script>
+<script src="js/lightgallery_fullscreen.js"></script>
+
+<script>
+    lightGallery(document.getElementById('animated-thumbnails'), {
+        plugins: [lgZoom, lgFullscreen]
+    });
+</script>
+
+</html>
