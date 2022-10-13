@@ -1,0 +1,256 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif !important;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 20px;
+            color: #222;
+        }
+
+        .line {
+            background-color: #ff4336;
+            height: 6px;
+            width: 90px;
+            margin: 6px auto 10px;
+            border-radius: 10px;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-areas:
+                'ip1 ip1 ip2 ip2 ip2 ip3 ip3'
+                'ip1 ip1 ip4 ip4 ip5 ip5 ip5'
+                'ip1 ip1 ip4 ip4 ip5 ip5 ip5'
+                'ip6 ip6 ip4 ip4 ip5 ip5 ip5'
+                'ip12 ip12 ip7 ip7 ip7 ip8 ip8'
+                'ip12 ip12 ip7 ip7 ip7 ip11 ip11'
+                'ip9 ip9 ip9 ip10 ip10 ip11 ip11'
+                'ip9 ip9 ip9 ip10 ip10 ip11 ip11'
+                'ip9 ip9 ip9 ip10 ip10 ip11 ip11';
+            gap: 10px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0px auto;
+        }
+
+        .parent a {
+            overflow: hidden;
+        }
+
+        .parent a img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .6s;
+            border-radius: 5px;
+        }
+
+        .parent a img:hover {
+            transform: scale(1.1);
+        }
+
+        .div1 {
+            grid-area: ip1;
+        }
+
+        .div2 {
+            grid-area: ip2;
+        }
+
+        .div3 {
+            grid-area: ip3;
+        }
+
+        .div4 {
+            grid-area: ip4;
+        }
+
+        .div5 {
+            grid-area: ip5;
+        }
+
+        .div6 {
+            grid-area: ip6;
+        }
+
+        .div7 {
+            grid-area: ip7;
+        }
+
+        .div8 {
+            grid-area: ip8;
+        }
+
+        .div9 {
+            grid-area: ip9;
+        }
+
+        .div10 {
+            grid-area: ip10;
+        }
+
+        .div11 {
+            grid-area: ip11;
+        }
+
+        .div12 {
+            grid-area: ip12;
+        }
+
+        @media (max-width: 650px) {
+            .parent {
+                grid-template-areas:
+                    'ip1'
+                    'ip2'
+                    'ip3'
+                    'ip4'
+                    'ip5'
+                    'ip6'
+                    'ip7'
+                    'ip8'
+                    'ip9'
+                    'ip10'
+                    'ip11'
+                    'ip12';
+                grid-template-rows: 270px 350px 270px 350px 300px 270px 300px 250px 300px 250px 450px 350px;
+                padding: 20px 0px;
+                gap: 20px;
+                width: 90%;
+                max-width: 400px;
+                margin: 0px auto;
+            }
+        }
+
+        @media (min-width: 651px) and (max-width: 1100px) {
+            .parent {
+                grid-template-areas:
+                    'ip1 ip2'
+                    'ip1 ip4'
+                    'ip3 ip4'
+                    'ip3 ip6'
+                    'ip5 ip6'
+                    'ip10 ip7'
+                    'ip10 ip8'
+                    'ip9 ip8'
+                    'ip9 ip11'
+                    'ip12 ip11';
+                grid-template-rows: 300px 100px 240px 10px 250px 300px 200px 70px 250px 300px;
+                padding: 30px 20px;
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 751px) and (max-width: 900px) {
+            .parent {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (min-width: 901px) and (max-width: 1100px) {
+            .parent {
+                padding: 30px 0px;
+                width: 85%;
+                max-width: 820px;
+                margin: 0px auto;
+            }
+        }
+
+        .lg-download {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="fxgallery.css">
+</head>
+
+<body>
+
+    <section>
+        <h1>GALLERY<div class="line"></div>
+        </h1>
+        <div class="parent" id="animated-thumbnails">
+
+            <a href="img/img1.jpg" class="div1"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 1</h4><p>description 1</p></div>">
+                <img src="img/img1.jpg" />
+            </a>
+
+            <a href="img/img2.jpg" class="div2"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 2</h4><p>description 2</p></div>">
+                <img src="img/img2.jpg" />
+            </a>
+
+            <a href="img/img3.jpg" class="div3"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 3</h4><p>description 3</p></div>">
+                <img src="img/img3.jpg" />
+            </a>
+
+            <a href="img/img4.jpg" class="div4"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 4</h4><p>description 4</p></div>">
+                <img src="img/img4.jpg" />
+            </a>
+
+            <a href="img/img6.jpg" class="div5"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 5</h4><p>description 5</p></div>">
+                <img src="img/img6.jpg" />
+            </a>
+
+            <a href="img/img5.jpg" class="div6"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 6</h4><p>description 6</p></div>">
+                <img src="img/img5.jpg" />
+            </a>
+
+            <a href="img/img1.jpg" class="div7"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 7</h4><p>description 7</p></div>">
+                <img src="img/img1.jpg" />
+            </a>
+
+            <a href="img/img3.jpg" class="div8"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 8</h4><p>description 8</p></div>">
+                <img src="img/img3.jpg" />
+            </a>
+
+            <a href="img/img2.jpg" class="div9"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 9</h4><p>description 9</p></div>">
+                <img src="img/img2.jpg" />
+            </a>
+
+            <a href="img/img8.jpg" class="div10"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 10</h4><p>description 10</p></div>">
+                <img src="img/img8.jpg" />
+            </a>
+
+            <a href="img/img7.jpg" class="div11"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 11</h4><p>description 11</p></div>">
+                <img src="img/img7.jpg" />
+            </a>
+
+            <a href="img/img6.jpg" class="div12"
+                data-sub-html="<div class='lightGallery-captions'><h4>title 12</h4><p>description 12</p></div>">
+                <img src="img/img6.jpg" />
+            </a>
+        </div>
+    </section>
+</body>
+
+<script src="fxgallery.js"></script>
+<script src="zoom.js"></script>
+
+<script>
+    lightGallery(document.getElementById('animated-thumbnails'), {
+        plugins: [lgZoom]
+    });
+</script>
+
+</html>
