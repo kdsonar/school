@@ -142,8 +142,8 @@
         exThumbImage: '',
         isMobile: undefined,
         mobileSettings: {
-            controls: false,
-            showCloseIcon: false,
+            controls: true,
+            showCloseIcon: true,
             download: false,
         },
         plugins: [],
