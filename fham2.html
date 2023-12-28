@@ -1,0 +1,290 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Mixin */
+    /* reset */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: #f1f1f1;
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    nav {
+      background-color: #282c4e;
+      height: 50px;
+      padding: 0 16px;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    nav .m-menu__checkbox {
+      display: none;
+    }
+
+    nav label.m-menu__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 8px;
+      margin-right: 15px;
+    }
+
+    nav .m-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 450px;
+      width: 100%;
+      height: 100%;
+      -moz-transform: translate3d(450px, 0, 0);
+      -o-transform: translate3d(450px, 0, 0);
+      -ms-transform: translate3d(450px, 0, 0);
+      -webkit-transform: translate3d(450px, 0, 0);
+      transform: translate3d(450px, 0, 0);
+      -moz-transition: transform 0.35s;
+      -o-transition: transform 0.35s;
+      -webkit-transition: transform 0.35s;
+      transition: transform 0.35s;
+      z-index: 1;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    nav .m-menu__overlay {
+      background-color: rgba(103, 103, 103, 0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      bottom: 0;
+      z-index: 1;
+      display: none;
+    }
+
+    nav .m-menu__header {
+      padding: 0 16px;
+      height: 50px;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      -webkit-align-items: center;
+      align-items: center;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    nav .m-menu__header span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+    }
+
+    .nav_title {
+      margin-left: -35px;
+    }
+
+    nav .m-menu .m-menu {
+      -moz-transform: translate3d(480px, 0, 0);
+      -o-transform: translate3d(480px, 0, 0);
+      -ms-transform: translate3d(480px, 0, 0);
+      -webkit-transform: translate3d(480px, 0, 0);
+      transform: translate3d(480px, 0, 0);
+    }
+
+    nav .m-menu ul {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    nav .m-menu ul li a,
+    nav .m-menu ul li label {
+      display: block;
+      text-align: left;
+      padding: 0 15px;
+      line-height: 47px;
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      border-bottom: 1px solid #e8e8e8;
+      position: relative;
+      font-weight: 600;
+    }
+
+    nav .m-menu ul li label.a-label__chevron::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border-color: #333;
+      border-style: solid;
+      border-width: 1px 1px 0 0;
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 50%;
+      margin-top: -5px;
+      right: 16px;
+    }
+
+    nav .m-menu ul li .-invisible {
+      border-bottom: 0;
+    }
+
+    nav .m-menu .m-menu label.m-menu__toggle {
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      border-bottom: 0;
+      padding: 0;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+
+    nav .m-menu__checkbox:checked~.m-menu__overlay {
+      display: block;
+    }
+
+    nav .m-menu__checkbox:checked~.m-menu {
+      -moz-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .logo img {
+      height: 40px;
+      width: 55px;
+    }
+
+    @media (min-width: 1000px) {
+      nav .m-menu {
+        max-width: 350px;
+      }
+
+      nav label.m-menu__toggle {
+        cursor: pointer;
+      }
+
+      nav .m-menu ul li a,
+      nav .m-menu ul li label {
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <div class="logo">
+        <img src="https://kstech123.github.io/biz/img/our-logo.svg" alt="bhushan magar foundation logo"
+          title="Our Logo">
+      </div>
+      <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+      <label class="m-menu__toggle" for="menu">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="butt"
+          stroke-linejoin="arcs">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
+      <label class="m-menu__overlay" for="menu"></label>
+
+      <div class="m-menu">
+        <div class="m-menu__header">
+          <label class="m-menu__toggle" for="menu">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+              stroke-linecap="butt" stroke-linejoin="arcs">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </label>
+          <span>MENU</span>
+        </div>
+        <ul>
+          <li><label for="menu" onclick="location='#home'">Home</label></li>
+          <li><label for="menu" onclick="location='#about'">About</label></li>
+          <li><label for="menu" onclick="location='#gallery'">Gallery</label></li>
+          <li><label for="menu" onclick="location='#contact'">Contact</label></li>
+          <li>
+            <label class="a-label__chevron" for="item-2">Download</label>
+            <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+            <div class="m-menu">
+              <div class="m-menu__header">
+                <label class="m-menu__toggle" for="item-2">
+                  <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                    stroke-linecap="butt" stroke-linejoin="arcs" style="margin-top: -8px;">
+                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                  </svg>
+                </label>
+                <span class="nav_title">DOWNLOAD</span>
+              </div>
+              <ul>
+                <li><a href="https://mjcollege.kces.in/pdf/Syllabus/commerce/BCA_STRUCTURE_AND_SYLLABUS.pdf"
+                    download>Prospectus</a></li>
+                <li>
+                  <label class="a-label__chevron" for="item-2-3">Syllabus</label>
+                  <input type="checkbox" id="item-2-3" name="item-2" class="m-menu__checkbox">
+                  <div class="m-menu">
+                    <div class="m-menu__header">
+                      <label class="m-menu__toggle" for="item-2-3">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                          stroke-linecap="butt" stroke-linejoin="arcs" style="margin-top: -8px;">
+                          <path d="M19 12H6M12 5l-7 7 7 7" />
+                        </svg>
+                      </label>
+                      <span class="nav_title">SYLLABUS</span>
+                    </div>
+                    <ul>
+                      <li><label for="menu" onclick="location='#about'">FY (2022-23)</label></li>
+                      <li><label for="menu" onclick="location='#about'">SY (2022-23)</label></li>
+                      <li><label for="menu" onclick="location='#about'">TY (2022-23)</label></li>
+                      <li><label for="menu" onclick="location='#about'">TY (2020-21)</label></li>
+                      <li><label for="menu" onclick="location='#about'">SY (2020-21)</label></li>
+                    </ul>
+                </li>
+                <li><label for="menu" onclick="location='#about'">Admission Form</label></li>
+            </div>
+          </li>
+          <li><label for="menu" onclick="location='#about'">Testimonials</label></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</body>
+
+</html>
