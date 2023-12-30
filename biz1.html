@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/c4ba363eb7.js" crossorigin="anonymous"></script>
     <style>
         /* Mixin */
         /* reset */
@@ -291,6 +292,8 @@
 
         /* Notice */
 
+        /* Notice */
+
         #notice {
             text-align: center;
         }
@@ -298,7 +301,9 @@
         .notice-board {
             display: inline-block;
             height: 550px;
+            width: 90%;
             max-width: 300px;
+            margin: 0px auto;
             background: #282c4e;
             color: #fff;
             border-radius: 25px;
@@ -323,11 +328,18 @@
             top: 27px;
         }
 
-        marquee {
-            height: 465px;
+        .marquee-container {
+            height: 455px;
             text-align: center;
             padding: 0px 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            animation: scrollUp 25s linear infinite;
+            display: flex;
+            flex-direction: column-reverse;
         }
 
         .notice-board a {
@@ -339,6 +351,26 @@
             padding: 14px 0px;
             font-size: 19.5px;
             color: #fff;
+        }
+
+        .notice-board .fa {
+            font-size: 17px;
+            cursor: pointer;
+            user-select: none;
+            color: #fff;
+            position: absolute;
+            bottom: 10px;
+            left: 48%;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
         }
     </style>
 </head>
@@ -467,23 +499,41 @@
                     <h2>NOTICE</h2>
                     <div class="notice-white-dash" style="right: 0px;"></div>
                 </div>
-                <marquee direction="up" scrollamount="3" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
-                    <a href="https://forms.gle/tCWu4UidxybMyKAJ9">
-                        <div class="notice-content">Admission Form
-                            for
-                            Academic Year 2023-24</div>
-                    </a>
-                    <a href="https://chat.whatsapp.com/I2YSMozO5duI03DcCBdmKp">
-                        <div class="notice-content">Click here to
-                            join our Watsapp
-                            Group</div>
-                    </a>
-                    <div class="notice-content">Holidays will be from 06/11/23 till 20/11/23.</div>
-                </marquee>
+                <div class="marquee-container">
+                    <div class="marquee-content" data-animation="stop">
+                        <div class="notice-content">Parents meeting will be on 28/08/23</div>
+                        <div class="notice-content">Results will be send on the registered Email Id</div>
+                        <div class="notice-content">Diwali holidays will be from 06/11/23 till 20/11/23</div>
+                        <a href="https://chat.whatsapp.com/I2YSMozO5duI03DcCBdmKp">
+                            <div class="notice-content">Click here to join our WhatsApp Group</div>
+                        </a>
+                        <a href="https://forms.gle/tCWu4UidxybMyKAJ9">
+                            <div class="notice-content">Admission Form for Academic Year 2023-24</div>
+                        </a>
+                    </div>
+                    <i onclick="myFunction(this)" class="fa fa-pause" id="notice-play-pause"></i>
+                </div>
             </div>
         </section>
         <hr>
     </div>
+
+    <script>
+        // Toggle play pause for notice board
+        function myFunction(x) {
+            x.classList.toggle("fa-play");
+        }
+
+        /* Toggle Animations for notice board*/
+        const jstoggle = document.getElementById('notice-play-pause');
+        jstoggle.addEventListener('click', () => {
+            const animations = document.querySelectorAll('[data-animation');
+            animations.forEach(animation => {
+                const running = animation.style.animationPlayState || 'running';
+                animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
+            })
+        });
+    </script>
 </body>
 
 </html>
