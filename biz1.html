@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>School Project</title>
     <script src="https://kit.fontawesome.com/c4ba363eb7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="img/our-logo.svg" type="image/x-icon">
@@ -230,10 +230,6 @@
             nav .m-menu ul li label {
                 cursor: pointer;
             }
-
-            .notice-board .fa {
-                cursor: pointer;
-            }
         }
 
         .gallery-row {
@@ -374,6 +370,13 @@
             left: 48%;
         }
 
+        @media (min-width: 1000px) {
+            .notice-board .fa {
+                cursor: pointer;
+            }
+        }
+
+
         @keyframes scrollUp {
             0% {
                 transform: translateY(100%);
@@ -445,8 +448,12 @@
             margin: 0px auto -10px;
         }
 
+        .footer h4 {
+            font-size: 18px;
+        }
+
         .social-media-icons {
-            margin: -15px 0px -18px;
+            margin: -20px 0px -18px;
         }
 
         .social-media-icons .fa {
@@ -456,12 +463,13 @@
             font-size: 23px;
         }
 
-        .fa-heart {
-            color: #282c4e;
+        .footer p {
+            font-size: 16px;
+            line-height: 1.5;
         }
 
-        .footer p {
-            line-height: 1.5;
+        .fa-heart {
+            color: #282c4e;
         }
     </style>
 </head>
