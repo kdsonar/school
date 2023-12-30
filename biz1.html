@@ -14,10 +14,15 @@
         }
 
         body {
-            background-color: #f1f1f1;
+            font-family: Arial, Helvetica, sans-serif;
             padding: 0;
             margin: 0;
-            font-family: sans-serif;
+        }
+
+        hr {
+            opacity: 0.2 !important;
+            width: 80% !important;
+            margin: 50px auto;
         }
 
         .title {
@@ -27,7 +32,7 @@
         h2 {
             text-align: center;
             font-weight: 600;
-            font-size: 28px;
+            font-size: 27px;
         }
 
         .dash {
@@ -233,7 +238,7 @@
             padding: 0 4px;
             width: 95%;
             max-width: 1500px;
-            margin: 0px auto 30px;
+            margin: 0px auto;
         }
 
         /* Create four equal gallery-columns that sits next to each other */
@@ -282,6 +287,58 @@
                 flex: 100%;
                 max-width: 100%;
             }
+        }
+
+        /* Notice */
+
+        #notice {
+            text-align: center;
+        }
+
+        .notice-board {
+            display: inline-block;
+            height: 550px;
+            max-width: 300px;
+            background: #282c4e;
+            color: #fff;
+            border-radius: 25px;
+            position: relative;
+        }
+
+        .notice-title {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .notice-board h2 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .notice-white-dash {
+            height: 5px;
+            width: 80px;
+            background: #fff;
+            position: absolute;
+            top: 27px;
+        }
+
+        marquee {
+            height: 465px;
+            text-align: center;
+            padding: 0px 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .notice-board a {
+            text-decoration: none;
+        }
+
+        .notice-content {
+            border-bottom: 2px dashed white;
+            padding: 14px 0px;
+            font-size: 19.5px;
+            color: #fff;
         }
     </style>
 </head>
@@ -366,7 +423,9 @@
             </div>
         </nav>
 
-        <div class="title">
+        <!-- Gallery -->
+
+        <div class="title" id="gallery">
             <h2>GALLERY</h2>
             <div class="dash"></div>
         </div>
@@ -397,6 +456,33 @@
                 <img src="img/img12.jpg" style="width:100%">
             </div>
         </div>
+
+        <hr>
+
+        <!-- Notice Board -->
+        <section id="notice">
+            <div class="notice-board">
+                <div class="notice-title">
+                    <div class="notice-white-dash" style="left: 0px;"></div>
+                    <h2>NOTICE</h2>
+                    <div class="notice-white-dash" style="right: 0px;"></div>
+                </div>
+                <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                    <a href="https://forms.gle/tCWu4UidxybMyKAJ9">
+                        <div class="notice-content">Admission Form
+                            for
+                            Academic Year 2023-24</div>
+                    </a>
+                    <a href="https://chat.whatsapp.com/I2YSMozO5duI03DcCBdmKp">
+                        <div class="notice-content">Click here to
+                            join our Watsapp
+                            Group</div>
+                    </a>
+                    <div class="notice-content">Diwali holidays will be from 06/11/23 till 20/11/23.</div>
+                </marquee>
+            </div>
+        </section>
+        <hr>
     </div>
 </body>
 
