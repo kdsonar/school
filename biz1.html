@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/c4ba363eb7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="img/our-logo.svg" type="image/x-icon">
     <style>
         /* Mixin */
         /* reset */
         * {
-            padding: 0;
-            margin: 0;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
             padding: 0;
             margin: 0;
         }
@@ -24,10 +25,6 @@
             opacity: 0.2 !important;
             width: 80% !important;
             margin: 50px auto;
-        }
-
-        .title {
-            margin: 30px auto 15px;
         }
 
         h2 {
@@ -40,7 +37,7 @@
             background-color: #282c4e;
             height: 4px;
             width: 50px;
-            margin: 3px auto 0px;
+            margin: -15px auto 0px;
             border-radius: 5px;
         }
 
@@ -137,6 +134,12 @@
         nav .m-menu ul {
             height: 100%;
             overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav .m-menu ul li {
+            list-style: none;
         }
 
         nav .m-menu ul li a,
@@ -247,6 +250,11 @@
         }
 
         /* Create four equal gallery-columns that sits next to each other */
+
+        .gallery .title {
+            margin: 0px auto 10px;
+        }
+
         .gallery-column {
             -ms-flex: 25%;
             flex: 25%;
@@ -298,7 +306,7 @@
 
         /* Notice */
 
-        #notice {
+        .notice {
             text-align: center;
         }
 
@@ -375,6 +383,86 @@
                 transform: translateY(-100%);
             }
         }
+
+        /* Testimonial */
+
+        .testimonials .title {
+            margin: 0px auto 35px;
+        }
+
+        .testimonial-block {
+            width: 90%;
+            max-width: 350px;
+            margin: 0px auto 40px;
+            text-align: center;
+            border-radius: 25px;
+            background: rgba(216, 242, 255, 0.38);
+            padding: 20px;
+        }
+
+        .testimonial-block .fa {
+            font-size: 13px;
+            color: #007aff;
+        }
+
+        .testimonial-block p {
+            font-size: 17px;
+            line-height: 20px;
+            margin: 8px auto;
+        }
+
+        .testimonial-block h3 {
+            text-align: center;
+            font-size: 21px;
+            margin: 10px auto 0px;
+        }
+
+        .testimonial-role {
+            font-size: 15.2px;
+            display: block;
+        }
+
+        /* testimonial Swiper */
+
+        .swiper {
+            width: 90%;
+            max-width: 700px;
+            margin: 0px auto;
+        }
+
+        @media (max-width: 700px) {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+
+        /* footer */
+
+        .footer {
+            text-align: center;
+            margin: 0px auto -10px;
+        }
+
+        .social-media-icons {
+            margin: -15px 0px -18px;
+        }
+
+        .social-media-icons .fa {
+            color: #282c4e;
+            margin: 8px 6px 12px;
+            cursor: pointer;
+            font-size: 23px;
+        }
+
+        .fa-heart {
+            color: #282c4e;
+        }
+
+        .footer p {
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -450,9 +538,10 @@
                                         </ul>
                                 </li>
                                 <li><label for="menu" onclick="location='#about'">Admission Form</label></li>
+                            </ul>
                         </div>
                     </li>
-                    <li><label for="menu" onclick="location='#about'">Testimonials</label></li>
+                    <li><label for="menu" onclick="location='#testimonials'">Testimonials</label></li>
                     <li><label for="menu" onclick="location='#notice'">Notice</label></li>
                 </ul>
             </div>
@@ -460,42 +549,44 @@
 
         <!-- Gallery -->
 
-        <div class="title" id="gallery">
-            <h2>GALLERY</h2>
-            <div class="dash"></div>
-        </div>
+        <section class="gallery">
+            <div class="title" id="gallery">
+                <h2>GALLERY</h2>
+                <div class="dash"></div>
+            </div>
 
-        <div class="gallery-row">
-            <div class="gallery-column">
-                <img src="img/img4.jpg" style="width:100%">
-                <img src="img/img12.jpg" style="width:100%">
-                <img src="img/img5.jpg" style="width:100%">
-                <img src="img/img1.jpg" style="width:100%">
+            <div class="gallery-row">
+                <div class="gallery-column">
+                    <img src="img/img4.jpg" style="width:100%">
+                    <img src="img/img12.jpg" style="width:100%">
+                    <img src="img/img5.jpg" style="width:100%">
+                    <img src="img/img1.jpg" style="width:100%">
+                </div>
+                <div class="gallery-column">
+                    <img src="img/img2.jpg" style="width:100%">
+                    <img src="img/img3.jpg" style="width:100%">
+                    <img src="img/img4.jpg" style="width:100%">
+                    <img src="img/img13.jpg" style="width:100%">
+                </div>
+                <div class="gallery-column">
+                    <img src="img/img6.jpg" style="width:100%">
+                    <img src="img/img9.jpg" style="width:100%">
+                    <img src="img/img10.jpg" style="width:100%">
+                    <img src="img/img8.jpg" style="width:100%">
+                </div>
+                <div class="gallery-column large-gallery-column-4">
+                    <img src="img/img12.jpg" style="width:100%">
+                    <img src="img/img11.jpg" style="width:100%">
+                    <img src="img/img7.jpg" style="width:100%">
+                    <img src="img/img12.jpg" style="width:100%">
+                </div>
             </div>
-            <div class="gallery-column">
-                <img src="img/img2.jpg" style="width:100%">
-                <img src="img/img3.jpg" style="width:100%">
-                <img src="img/img4.jpg" style="width:100%">
-                <img src="img/img13.jpg" style="width:100%">
-            </div>
-            <div class="gallery-column">
-                <img src="img/img6.jpg" style="width:100%">
-                <img src="img/img9.jpg" style="width:100%">
-                <img src="img/img10.jpg" style="width:100%">
-                <img src="img/img8.jpg" style="width:100%">
-            </div>
-            <div class="gallery-column large-gallery-column-4">
-                <img src="img/img12.jpg" style="width:100%">
-                <img src="img/img11.jpg" style="width:100%">
-                <img src="img/img7.jpg" style="width:100%">
-                <img src="img/img12.jpg" style="width:100%">
-            </div>
-        </div>
+        </section>
 
-        <hr>
+        <hr id="notice">
 
         <!-- Notice Board -->
-        <section id="notice">
+        <section class="notice">
             <div class="notice-board">
                 <div class="notice-title">
                     <div class="notice-white-dash" style="left: 0px;"></div>
@@ -518,8 +609,92 @@
                 </div>
             </div>
         </section>
+        <hr id="testimonials">
+        <section class="testimonials">
+            <div class="title">
+                <h2>TESTIMONIALS</h2>
+                <div class="dash"></div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-block">
+                            <i class="fa fa-quote-left"></i>
+                            <p>I am studying in this school and i am really feeling good with the environment which is
+                                fully
+                                studious and classes are organized well.fully
+                                studious and classes are organized well.</p>
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Mr. Niraj Jain<span class="testimonial-role">(Parent)</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-block">
+                            <i class="fa fa-quote-left"></i>
+                            <p>I am studying in this school and i am really feeling good with the environment which is
+                                fully
+                                studious and classes are organized well.</p>
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Mrs. Disha Adwani<span class="testimonial-role">(Alumni)</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-block">
+                            <i class="fa fa-quote-left"></i>
+                            <p>I am studying in this school and i am really feeling good with the environment which is
+                                fully
+                                studious and classes are organized well. fully
+                                studious and classes are organized well.</p>
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Mr. Pratik Patil<span class="testimonial-role">(Parent)</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-block">
+                            <i class="fa fa-quote-left"></i>
+                            <p>I am studying in this school and i am really feeling good with the environment which is
+                                fully
+                                studious and classes are organized well. fully
+                                studious and classes are organized well.</p>
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Ms. Nikita Shah<span class="testimonial-role">(Student)</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-block">
+                            <i class="fa fa-quote-left"></i>
+                            <p>I am studying in this school and i am really feeling good with the environment which is
+                                fully
+                                studious and classes are organized well.</p>
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Mr. Jaya Sonar<span class="testimonial-role">(parent)</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
         <hr>
+        <!-- footer -->
+
+        <section class="footer">
+            <h4>FOLLOW US ON</h4>
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/GurukulSchoolPachora/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_gurukul_school_pachora_/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCLi7hr5FLt0rf7p-bttm64g"><i class="fa fa-youtube"></i></a>
+            </div>
+            <p>Copyright © 2023 Gurukul School & Jr College. All Rights Reserved<br>
+                Made with <i class="fa fa-heart"></i> by KSTECH</p>
+        </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <script>
         // Toggle play pause for notice board
@@ -535,6 +710,27 @@
                 const running = animation.style.animationPlayState || 'running';
                 animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
             })
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            grabCursor: true,
+            rewind: true,
+            autoHeight: true,
+            keyboard: {
+                enabled: true,
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
 </body>
