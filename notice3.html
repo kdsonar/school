@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        hr {
+            opacity: 0.2 !important;
+            width: 80% !important;
+            margin: 40px auto;
+        }
+
+        /* Notice */
+
+        #notice {
+            text-align: center;
+        }
+
+        .notice-board {
+            display: inline-block;
+            height: 550px;
+            width: 90%;
+            max-width: 300px;
+            margin: 0px auto;
+            background: #282c4e;
+            color: #fff;
+            border-radius: 25px;
+            position: relative;
+        }
+
+        .notice-title {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .notice-board h2 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .notice-white-dash {
+            height: 5px;
+            width: 80px;
+            background: #fff;
+            position: absolute;
+            top: 27px;
+        }
+
+        .marquee-container {
+            height: 465px;
+            text-align: center;
+            padding: 0px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            animation: scrollUp 25s linear infinite;
+            display: flex;
+            flex-direction: column-reverse;
+            /* -webkit-animation-play-state: running;
+            animation-play-state: running; */
+        }
+
+        /* .marquee-container:hover .marquee-content {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        } */
+
+        .notice-board a {
+            text-decoration: none;
+        }
+
+        .notice-content {
+            border-bottom: 2px dashed white;
+            padding: 14px 0px;
+            font-size: 19.5px;
+            color: #fff;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <section id="notice">
+        <div class="notice-board">
+            <div class="notice-title">
+                <div class="notice-white-dash" style="left: 0px;"></div>
+                <h2>NOTICE</h2>
+                <div class="notice-white-dash" style="right: 0px;"></div>
+            </div>
+            <div class="marquee-container" id="notice-play-pause">
+                <div class="marquee-content" data-animation="stop">
+                    <div class="notice-content">Parents meeting will be on 28/08/23</div>
+                    <div class="notice-content">Results will be send on the registered Email Id</div>
+                    <div class="notice-content">Diwali holidays will be from 06/11/23 till 20/11/23</div>
+                    <a href="https://chat.whatsapp.com/I2YSMozO5duI03DcCBdmKp">
+                        <div class="notice-content">Click here to join our WhatsApp Group</div>
+                    </a>
+                    <a href="https://forms.gle/tCWu4UidxybMyKAJ9">
+                        <div class="notice-content">Admission Form for Academic Year 2023-24</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <script>
+        /* Toggle Animations */
+        const jstoggle = document.getElementById('notice-play-pause');
+        jstoggle.addEventListener('click', () => {
+            const animations = document.querySelectorAll('[data-animation');
+            animations.forEach(animation => {
+                const running = animation.style.animationPlayState || 'running';
+                animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
+            })
+        });
+    </script>
+</body>
+
+</html>
