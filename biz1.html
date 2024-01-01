@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="img/our-logo.svg" type="image/x-icon">
     <style>
-        /* Mixin */
-        /* reset */
         * {
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
@@ -24,33 +22,50 @@
         hr {
             opacity: 0.2 !important;
             width: 80% !important;
+        }
+
+        section {
             margin: 50px auto;
         }
 
         h2 {
             text-align: center;
             font-weight: 600;
-            font-size: 27px;
+            font-size: 27.5px;
         }
 
         .dash {
             background-color: #282c4e;
             height: 4px;
             width: 50px;
-            margin: -15px auto 0px;
+            margin: -17px auto 0px;
             border-radius: 5px;
         }
 
         nav {
-            background-color: #282c4e;
-            height: 50px;
-            padding: 0 16px;
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(img/bg.jpg);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            color: #fff;
             display: -ms-flexbox;
             display: -webkit-box;
             display: -webkit-flex;
             display: flex;
             -webkit-align-items: center;
             align-items: center;
+        }
+
+        nav .hero_name {
+            width: 100%;
+        }
+
+        nav .hero_name h1 {
+            font-size: 26px;
+            text-transform: uppercase;
+            line-height: 37px;
         }
 
         nav .m-menu__checkbox {
@@ -215,6 +230,11 @@
         .logo img {
             height: 35px;
             width: 52px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 8px;
+            margin-left: 15px;
         }
 
         @media (min-width: 1000px) {
@@ -230,14 +250,20 @@
             nav .m-menu ul li label {
                 cursor: pointer;
             }
+
+            nav .hero_name h1 {
+                font-size: 35px;
+                line-height: 42px;
+            }
         }
+
+
+        /* Gallery */
 
         .gallery-row {
             display: -ms-flexbox;
-            /* IE10 */
             display: flex;
             -ms-flex-wrap: wrap;
-            /* IE10 */
             flex-wrap: wrap;
             padding: 0 4px;
             width: 95%;
@@ -248,7 +274,7 @@
         /* Create four equal gallery-columns that sits next to each other */
 
         .gallery .title {
-            margin: 0px auto 10px;
+            margin: 0px auto 15px;
         }
 
         .gallery-column {
@@ -297,8 +323,6 @@
                 max-width: 100%;
             }
         }
-
-        /* Notice */
 
         /* Notice */
 
@@ -399,7 +423,7 @@
             margin: 0px auto 40px;
             text-align: center;
             border-radius: 25px;
-            background: rgba(216, 242, 255, 0.38);
+            background: rgba(216, 242, 255, 0.6);
             padding: 20px;
         }
 
@@ -479,6 +503,9 @@
         <nav>
             <div class="logo">
                 <img src="img/our-logo.svg" alt="bhushan magar foundation logo" title="Our Logo">
+            </div>
+            <div class="hero_name">
+                <h1>Aster<br>International<br>School</h1>
             </div>
             <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
             <label class="m-menu__toggle" for="menu">
@@ -651,7 +678,7 @@
                     <div class="swiper-slide">
                         <div class="testimonial-block">
                             <i class="fa fa-quote-left"></i>
-                            <p>I am studying in this school & i am really feeling good with the environment which is
+                            <p>I am studying in this school and i am really feeling good with the environment which is
                                 fully
                                 studious and classes are organized well. fully
                                 studious and classes are organized well.</p>
