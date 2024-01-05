@@ -278,7 +278,8 @@
             flex-direction: row;
             margin-top: 12px;
             text-align: center;
-            font-size: 16.6px;
+            font-size: 17px;
+            line-height: 20.2px;
             color: #000;
         }
 
@@ -326,9 +327,9 @@
 
         .member-card {
             width: 250px;
-            margin: 25px;
+            margin: 22px 22px 0px;
             background-color: rgba(216, 242, 255, 0.6);
-            border-radius: 25px;
+            border-radius: 22px;
             text-align: center;
             padding: 20px 0px;
         }
@@ -336,17 +337,17 @@
         .member-card img {
             height: 70px;
             width: 70px;
-            border-radius: 15px;
+            border-radius: 13px;
         }
 
         .member-card .member-name {
-            font-size: 20px;
+            font-size: 18.7px;
             font-weight: 600;
             margin-top: 11.5px;
         }
 
         .member-card .member-role {
-            font-size: 15px;
+            font-size: 14.2px;
             font-weight: 600;
         }
 
@@ -357,7 +358,7 @@
         }
 
         .member-card .member-social-media .fa {
-            font-size: 20px;
+            font-size: 19px;
             color: #007aff;
             margin: 9px 5px 0px;
         }
@@ -381,10 +382,11 @@
         @media (max-width: 622px) {
             .team {
                 margin-top: 30px;
+                margin-bottom: -10px;
             }
 
             .member-card {
-                margin: 12px 15px;
+                margin: 15px;
             }
         }
 
@@ -398,7 +400,7 @@
             flex-wrap: wrap;
             padding: 0 4px;
             width: 95%;
-            max-width: 1500px;
+            max-width: 1420px;
             margin: 0px auto;
         }
 
@@ -412,11 +414,11 @@
             -ms-flex: 25%;
             flex: 25%;
             max-width: 25%;
-            padding: 0 8px;
+            padding: 0 9px;
         }
 
         .gallery-column img {
-            margin-top: 16px;
+            margin-top: 17px;
             vertical-align: middle;
             width: 100%;
         }
@@ -452,6 +454,65 @@
                 -ms-flex: 100%;
                 flex: 100%;
                 max-width: 100%;
+            }
+        }
+
+        /* WE */
+
+        .we-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: row;
+            margin-top: 35px;
+        }
+
+        .we-card {
+            text-align: center;
+            background-color: rgba(216, 242, 255, 0.6);
+            width: 90%;
+            max-width: 280px;
+            margin: 0px 23px;
+            padding: 25px;
+            border-radius: 30px;
+        }
+
+        .we-icon {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: #007aff;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .we-title {
+            font-size: 19.8px;
+            font-weight: 600;
+            margin-top: 14px;
+        }
+
+        .we-text {
+            font-size: 15.44px;
+            font-weight: 400;
+            margin-top: 3px;
+        }
+
+        @media (min-width: 652px) and (max-width: 989px) {
+            .we-card {
+                margin: 15px;
+            }
+        }
+
+        @media (max-width: 651px) {
+            .we-container {
+                margin-top: 22px;
+            }
+
+            .we-card {
+                margin: 14px;
             }
         }
 
@@ -594,6 +655,37 @@
             .swiper-button-prev {
                 display: none;
             }
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact .text {
+            font-size: 16px;
+            font-style: italic;
+            margin: 27px auto;
+        }
+
+        .contact-container a {
+            text-decoration: none;
+            color: #000;
+            font-size: 17.23px;
+            line-height: 21px;
+        }
+
+        .number {
+            margin-top: 8px;
+        }
+
+        .mail {
+            margin-top: 3px;
+        }
+
+        .contact-container .fa {
+            margin-right: 7px;
         }
 
         /* footer */
@@ -790,12 +882,12 @@
             </div>
         </section>
 
-        <hr>
+        <hr id="gallery">
 
         <!-- Gallery -->
 
         <section class="gallery">
-            <div class="title" id="gallery">
+            <div class="title">
                 <h2>GALLERY</h2>
                 <div class="dash"></div>
             </div>
@@ -824,6 +916,47 @@
                     <img src="img/img11.jpg" style="width:100%">
                     <img src="img/img7.jpg" style="width:100%">
                     <img src="img/img12.jpg" style="width:100%">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- WE -->
+
+        <section class="we">
+            <div class="title">
+                <h2>WE</h2>
+                <div class="dash"></div>
+            </div>
+
+            <div class="we-container">
+
+                <div class="we-card">
+                    <div class="we-icon">
+                        <img src="img/we-1.png" alt="gurukul international school pachora's highlight 2" width="47px"
+                            height="41px" style="margin-top: 24px; margin-left: 2.5px;">
+                    </div>
+                    <div class="we-title">Years of Experience</div>
+                    <div class="we-text">Experienced and caring faculty and staff</div>
+                </div>
+
+                <div class="we-card">
+                    <div class="we-icon">
+                        <img src="img/we-2.png" alt="gurukul international school pachora's highlight 2" width="45px"
+                            height="40px" style="margin-top: 24px;">
+                    </div>
+                    <div class="we-title">Progress Report</div>
+                    <div class="we-text">Track Student's Monthly Progress Status</div>
+                </div>
+
+                <div class="we-card">
+                    <div class="we-icon">
+                        <img src="img/we-3.png" alt="gurukul international school pachora's highlight 2" width="46px"
+                            height="46.5px" style="margin-top: 21px;">
+                    </div>
+                    <div class="we-title">Highly Qualified Staff</div>
+                    <div class="we-text">Experienced and caring faculty and staff</div>
                 </div>
             </div>
         </section>
@@ -923,6 +1056,43 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
+
+        <!-- Contact -->
+
+        <hr id="contact">
+
+        <section class="contact">
+            <div class="title">
+                <h2>CONTACT</h2>
+                <div class="dash"></div>
+            </div>
+
+            <div class="text">We'd love your feedback !</div>
+
+            <div class="contact-container">
+                <div class="contact-card">
+                    <div class="addess">
+                        <a
+                            href="https://www.google.com/maps/dir//g+block,+46,+Trident+Road,+G+Block+BKC,+Bandra+Kurla+Complex,+Bandra+East,+Mumbai,+Maharashtra+400098/@19.066662,72.7880814,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ebf2dfe3e9:0x1e402f1b9c8b9a77!2m2!1d72.8704831!2d19.0666803">
+                            <i class="fa fa-map-marker"></i> ST. Martin International School<br>Near Galaxy
+                            Paramount<br>Andheri (West) - 400014
+                        </a>
+                    </div>
+                    <h4>OR</h4>
+                    <div class="number">
+                        <a href="tel:+91 8983618854">
+                            <i class="fa fa-phone"></i> +91 89836 18854
+                        </a>
+                    </div>
+                    <div class="mail">
+                        <a href="mailto:st.martin@gmail.com">
+                            <i class="fa fa-envelope"></i> st.martin@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <hr>
         <!-- footer -->
 
