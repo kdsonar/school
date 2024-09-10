@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Example</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Buttons for fullscreen and exiting fullscreen -->
+  <button id="fullscreenBtn">Go Fullscreen</button>
+  <button id="exitFullscreenBtn" style="display:none;">Exit Fullscreen</button>
+
+  <script>
+    // Fullscreen button functionality
+    document.getElementById('fullscreenBtn').addEventListener('click', function() {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+      }
+      
+      // Toggle buttons
+      document.getElementById('fullscreenBtn').style.display = 'none';
+      document.getElementById('exitFullscreenBtn').style.display = 'inline-block';
+    });
+
+    // Exit fullscreen button functionality
+    document.getElementById('exitFullscreenBtn').addEventListener('click', function() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+      
+      // Toggle buttons
+      document.getElementById('exitFullscreenBtn').style.display = 'none';
+      document.getElementById('fullscreenBtn').style.display = 'inline-block';
+    });
+  </script>
+</body>
+</html>
